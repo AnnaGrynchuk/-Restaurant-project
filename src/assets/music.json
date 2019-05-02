@@ -1,0 +1,52 @@
+[
+    {
+        "id":"01",
+        "date":"03.05.19",
+        "band":"Just Feel"
+    },
+     {
+        "id":"02",
+        "date":"04.05.19",
+        "band":"Rebel Rocks"
+    },
+     {
+        "id":"03",
+        "date":"08.05.19",
+        "band":"Family Band"
+    },
+     {
+        "id":"04",
+        "date":"09.05.19",
+        "band":"AC/DC Cover Party"
+    },
+     {
+        "id":"05",
+        "date":"10.05.19",
+        "band":"КАРАОКЕ Jack London"
+    },
+     {
+        "id":"06",
+        "date":"11.05.19",
+        "band":"Big Feathers"
+    },
+     {
+        "id":"07",
+        "date":"17.05.19",
+        "band":"Rolling Stones Cover Party "
+    },
+     {
+        "id":"08",
+        "date":"18.05.19",
+        "band":"Deep Purple Cover Party "
+    },
+     {
+        "id":"09",
+        "date":"24.05.19",
+        "band":"Ginger Band"
+    },
+     {
+        "id":"10",
+        "date":"25.05.19",
+        "band":"Acousteak and Beat"
+    }
+]
