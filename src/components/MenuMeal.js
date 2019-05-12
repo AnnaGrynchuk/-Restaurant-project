@@ -3,7 +3,7 @@ import Meal from './Meal';
 import SortButtons from './SortButtons';
 import FilterMealButtons from './FilterMealButtons';
 import InputSearch from './InputSearch';
-import data from "./assets/meal.json";
+import data from "../assets/meal.json";
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -56,16 +56,16 @@ class MenuMeal extends Component {
     componentDidMount() {
         this.setState({ list: data });
     }
-    searchTitle = ({ title }) => {
+    handleSearchTitle = ({ title }) => {
         this.setState({ title })
     }
-    sortMeal = ({ id }) => {
+    handleSortMeal = ({ id }) => {
         this.setState({ id });
     }
-    filterMeal = ({ category }) => {
+    handleFilterMeal = ({ category }) => {
         this.setState({ category });
     }
-    resetAll = () => {
+    handleResetAll = () => {
         this.myFormRef.reset();
         this.setState({ title: '', id: '', category: '' });
     }
@@ -101,10 +101,10 @@ class MenuMeal extends Component {
         return (
             <Wrapper>
                 <SideMenuList ref={this.getFormRef}>
-                    <InputSearch handleSearch={this.searchTitle} />
-                    <SortButtons handleSort={this.sortMeal} />
-                    <FilterMealButtons handleFilter={this.filterMeal} />
-                    <Reset onClick={this.resetAll} type="button"> Сбросить все фильтры</Reset>
+                    <InputSearch handleSearch={this.handleSearchTitle} />
+                    <SortButtons handleSort={this.handleSortMeal} />
+                    <FilterMealButtons handleFilter={this.handleFilterMeal} />
+                    <Reset onClick={this.handleResetAll} type="button"> Сбросить все фильтры</Reset>
                 </SideMenuList>
                 <MealContainer>
                     {result.map(meal => (

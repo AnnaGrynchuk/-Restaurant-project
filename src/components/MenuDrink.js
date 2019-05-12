@@ -3,7 +3,7 @@ import Drinks from './Drinks';
 import SortButtons from './SortButtons';
 import FilterDrinksButtons from './FilterDrinksButtons';
 import InputSearch from './InputSearch';
-import data from "./assets/drinks.json";
+import data from "../assets/drinks.json";
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -56,16 +56,16 @@ class MenuDrink extends Component {
   componentDidMount() {
     this.setState({ list: data });
   }
-  searchTitle = ({ title }) => {
+  handleSearchTitle = ({ title }) => {
     this.setState({ title })
   }
-  sortDrinks = ({ id }) => {
+  handleSortDrinks = ({ id }) => {
     this.setState({ id });
   }
-  filterDrinks = ({ category }) => {
+  handleFilterDrinks = ({ category }) => {
     this.setState({ category });
   }
-  resetAll = () => {
+  handleResetAll = () => {
     this.myFormRef.reset();
     this.setState({ title: '', id: '', category: '' });
   }
@@ -101,10 +101,10 @@ class MenuDrink extends Component {
     return (
       <Wrapper>
         <SideMenuList ref={this.getFormRef}>
-          <InputSearch handleSearch={this.searchTitle} />
-          <SortButtons handleSort={this.sortDrinks} />
-          <FilterDrinksButtons handleFilter={this.filterDrinks} />
-          <Reset onClick={this.resetAll} type="button"> Сбросить все фильтры</Reset>
+          <InputSearch handleSearch={this.handleSearchTitle} />
+          <SortButtons handleSort={this.handleSortDrinks} />
+          <FilterDrinksButtons handleFilter={this.handleFilterDrinks} />
+          <Reset onClick={this.handleResetAll} type="button"> Сбросить все фильтры</Reset>
         </SideMenuList>
         <DrinksContainer>
           {result.map(drinks => (

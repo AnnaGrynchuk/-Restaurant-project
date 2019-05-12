@@ -8,6 +8,9 @@ const StyledHeader = styled.div`
     justify-content: space-between;
     width: 100%;
     background-color: #0E8B87;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 `;
 const Logo = styled.div`
     font-size: 36px;
@@ -35,7 +38,7 @@ const MenuItem = styled.span`
         border-right:none;
     }
     :hover {
-    background-color: #106562;
+        background-color: #106562;
     }
 `;
 const DropItem = styled.div`
@@ -52,10 +55,8 @@ const Ulist = styled.ul`
     position: absolute;
     background-color: #0E8B87;
     z-index:1;
-    
 `;
 const ListItem = styled.li`
-
 `;
 const Links = styled.a`
     display: block;
@@ -68,7 +69,6 @@ const Links = styled.a`
     :hover {
         background-color: #106562;
         } 
-
 `;
 const StyledLink = styled(NavLink)`
     color: white;
@@ -124,9 +124,9 @@ class Header extends Component {
                 <NavBar>
                     <MenuItem ><StyledLink to="/"> Главная</StyledLink> </MenuItem>
                     <DropItem  >
-                        <Button id="Menu" onMouseEnter={this.onClick} >
+                        <Button id="Menu" onMouseOver={this.onClick} >
                             Меню
-                    </Button>
+                        </Button>
                         {displayMenu && id === "Menu" ? (
                             <Ulist onMouseLeave={this.onClick}>
                                 <ListItem>
@@ -148,13 +148,12 @@ class Header extends Component {
                             (
                                 null
                             )}
-
                     </DropItem>
-
+                    <MenuItem ><StyledLink to="/media">Галлерея</StyledLink> </MenuItem>
                     <DropItem >
-                        <Button id="Events" onMouseEnter={this.onClick}>
+                        <Button id="Events" onMouseOver={this.onClick}>
                             События
-                    </Button>
+                        </Button>
                         {displayMenu && id === "Events" ? (
                             <Ulist onMouseLeave={this.onClick}>
                                 <ListItem>
@@ -176,15 +175,12 @@ class Header extends Component {
                                 null
                             )}
                     </DropItem>
-                    <MenuItem  ><StyledLink to="/media">Галлерея</StyledLink> </MenuItem>
+                    <MenuItem  ><StyledLink to="/reservation">Резерв столов</StyledLink> </MenuItem>
                     <MenuItem  >Контакты</MenuItem>
-
                 </NavBar>
             </StyledHeader>
         )
     }
-
-
 }
 
 

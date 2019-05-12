@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Info = styled.div`
     width: 160px;
-    min-height: 340px;
+    min-height: 320px;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px; 
@@ -52,11 +52,11 @@ const Price = styled(Text)`
     font-weight: bold;
     color: #D68A01;
 `;
-const Meal = (props) => {
+const Drinks = (props) => {
     const { title, picture, info, price } = props;
     return (
         <Info >
-            <Photo src={require(`./img/meal/${picture}`)} alt="dish" />
+            <Photo src={require(`../img/drinks/${picture}`)} alt="drink" />
             <Name>
                 {title}
             </Name>
@@ -66,10 +66,9 @@ const Meal = (props) => {
             <Price>
                 {price} грн
             </Price>
-
         </Info>
     );
 
 }
 
-export default Meal
+export default Drinks

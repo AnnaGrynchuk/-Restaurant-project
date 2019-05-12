@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Info = styled.div`
     width: 160px;
-    min-height: 320px;
+    min-height: 340px;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px; 
@@ -52,11 +52,11 @@ const Price = styled(Text)`
     font-weight: bold;
     color: #D68A01;
 `;
-const Drinks = (props) => {
+const Meal = (props) => {
     const { title, picture, info, price } = props;
     return (
         <Info >
-            <Photo src={require(`./img/drinks/${picture}`)} alt="drink" />
+            <Photo src={require(`../img/meal/${picture}`)} alt="dish" />
             <Name>
                 {title}
             </Name>
@@ -72,4 +72,4 @@ const Drinks = (props) => {
 
 }
 
-export default Drinks
+export default Meal

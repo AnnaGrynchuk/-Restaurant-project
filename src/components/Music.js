@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import data from "./assets/music.json";
+import data from "../assets/music.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Wrapper = styled.div`
@@ -42,14 +42,13 @@ class Music extends Component {
 
         return (
             <Wrapper>
-                <Image src={require(`./img/gallery/concerts.jpg`)} alt="background_picture" />
+                <Image src={require(`../img/gallery/concerts.jpg`)} alt="background_picture" />
                 <TextContainer>
                     {list.map(bands => (
                         <Text key={bands.id}>
                             {bands.date}&nbsp;<FontAwesomeIcon icon="guitar" color="black" />&nbsp; {bands.band}
                         </Text>))}
                 </TextContainer>
-
             </Wrapper>
         )
     }

@@ -1,130 +1,129 @@
-[
-    {
-        "id":"01",
-        "title":"пина колада",
-        "category":"alcohol",
-        "info":"алкогольный коктейль",
+[{
+        "id": "01",
+        "title": "пина колада",
+        "category": "alcohol",
+        "info": "алкогольный коктейль",
         "price": "130",
         "url": "1.jpg"
     },
     {
-        "id":"02",
-        "title":"б52",
-        "category":"alcohol",
-        "info":"алкогольный коктейль",
+        "id": "02",
+        "title": "б52",
+        "category": "alcohol",
+        "info": "алкогольный коктейль",
         "price": "80",
         "url": "2.jpg"
     },
     {
-        "id":"03",
-        "title":"маргарита",
-        "category":"alcohol",
-        "info":"алкогольный коктейль",
+        "id": "03",
+        "title": "маргарита",
+        "category": "alcohol",
+        "info": "алкогольный коктейль",
         "price": "130",
         "url": "3.jpg"
     },
     {
-        "id":"04",
-        "title":"мексиканец",
-        "category":"alcohol",
-        "info":"алкогольный коктейль",
+        "id": "04",
+        "title": "мексиканец",
+        "category": "alcohol",
+        "info": "алкогольный коктейль",
         "price": "70",
         "url": "4.JPG"
     },
     {
-        "id":"05",
-        "title":"куба либре",
-        "category":"alcohol",
-        "info":"алкогольный коктейль",
+        "id": "05",
+        "title": "куба либре",
+        "category": "alcohol",
+        "info": "алкогольный коктейль",
         "price": "120",
         "url": "5.jpg"
     },
     {
-        "id":"06",
-        "title":"мохито",
-        "category":"alcohol",
-        "info":"алкогольный коктейль",
+        "id": "06",
+        "title": "мохито",
+        "category": "alcohol",
+        "info": "алкогольный коктейль",
         "price": "110",
         "url": "6.jpg"
     },
     {
-        "id":"07",
-        "title":"ром",
-        "category":"alcohol",
-        "info":"крепкий алкоголь",
+        "id": "07",
+        "title": "ром",
+        "category": "alcohol",
+        "info": "крепкий алкоголь",
         "price": "65",
         "url": "7.jpg"
     },
     {
-        "id":"08",
-        "title":"текила",
-        "category":"алкогольный",
-        "info":"крепкий алкоголь",
+        "id": "08",
+        "title": "текила",
+        "category": "алкогольный",
+        "info": "крепкий алкоголь",
         "price": "70",
         "url": "8.jpg"
     },
     {
-        "id":"09",
-        "title":"виски",
-        "category":"alcohol",
-        "info":"крепкий алкоголь",
+        "id": "09",
+        "title": "виски",
+        "category": "alcohol",
+        "info": "крепкий алкоголь",
         "price": "70",
         "url": "9.jpg"
     },
     {
-        "id":"10",
-        "title":"коньяк",
-        "category":"alcohol",
-        "info":"крепкий алкоголь",
+        "id": "10",
+        "title": "коньяк",
+        "category": "alcohol",
+        "info": "крепкий алкоголь",
         "price": "70",
         "url": "10.jpg"
     },
     {
-        "id":"11",
-        "title":"джин",
-        "category":"alcohol",
-        "info":"крепкий алкоголь",
+        "id": "11",
+        "title": "джин",
+        "category": "alcohol",
+        "info": "крепкий алкоголь",
         "price": "70",
         "url": "11.jpg"
     },
     {
-        "id":"12",
-        "title":"Leff Brune",
-        "category":"alcohol",
-        "info":"пиво темное",
+        "id": "12",
+        "title": "пиво Leff",
+        "category": "alcohol",
+        "info": "пиво темное",
         "price": "75",
         "url": "13.jpg"
     },
     {
-        "id":"13",
-        "title":"Leff Blonde",
-        "category":"alcohol",
-        "info":"пиво светлое",
+        "id": "13",
+        "title": "пиво Leff",
+        "category": "alcohol",
+        "info": "пиво светлое",
         "price": "75",
         "url": "12.jpg"
     },
-     {
-        "id":"14",
-        "title":"кофе",
-        "category":"drink",
-        "info":"горячий напиток",
+    {
+        "id": "14",
+        "title": "кофе",
+        "category": "drink",
+        "info": "горячий напиток",
         "price": "50",
         "url": "14.jpg"
     },
-     {
-        "id":"15",
-        "title":"чай черный",
-        "category":"drink",
-        "info":"горячий напиток",
+    {
+        "id": "15",
+        "title": "чай черный",
+        "category": "drink",
+        "info": "горячий напиток",
         "price": "35",
         "url": "15.jpg"
     },
-     {
-        "id":"16",
-        "title":"чай зеленый",
-        "category":"drink",
-        "info":"горячий напиток",
+    {
+        "id": "16",
+        "title": "чай зеленый",
+        "category": "drink",
+        "info": "горячий напиток",
         "price": "40",
         "url": "16.jpg"
-    }        
+    }
 ]

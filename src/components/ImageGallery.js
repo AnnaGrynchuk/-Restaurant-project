@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import data from "./assets/media.json";
+import data from "../assets/media.json";
 import Loader from "./Loader"
 
 const Wrapper = styled.div`
@@ -91,7 +91,7 @@ class ImageGallery extends Component {
                     {isLoading ? <Loader></Loader> : ""}
                 </Container>
                 <Gallery>
-                    {visibleImages.map(img => <Image onLoad={this.handleImageLoaded} key={img.id} src={require(`./img/gallery/${img.url}`)}>
+                    {visibleImages.map(img => <Image onLoad={this.handleImageLoaded} key={img.id} src={require(`../img/gallery/${img.url}`)}>
                     </Image>)}
                 </Gallery>
                 <Pagination>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import data from './assets/slider.json';
+import data from '../assets/slider.json';
 
 
 const SlideWrapper = styled.div`
@@ -39,7 +39,7 @@ class Slider extends Component {
         this.setState({ images: data });
     }
 
-    previousSlide = () => {
+    handlePreviousSlide = () => {
         const { images, imageIndex } = this.state;
         const lastIndex = images.length - 1;
         const letCarousel = imageIndex === 0;
@@ -47,7 +47,7 @@ class Slider extends Component {
         this.setState({ imageIndex: index });
     }
 
-    nextSlide = () => {
+    handleNextSlide = () => {
         const { images, imageIndex } = this.state;
         const lastIndex = images.length - 1;
         const letCarousel = imageIndex === lastIndex;
@@ -60,9 +60,9 @@ class Slider extends Component {
             <>
                 {(images.length) &&
                     <SlideWrapper>
-                        <Slide src={require(`./img/slider/${images[imageIndex].url}`)} />
-                        <ArrowLeft onClick={this.previousSlide}> <FontAwesomeIcon icon="chevron-left" size="2x" /></ArrowLeft>
-                        <ArrowRight onClick={this.nextSlide}> <FontAwesomeIcon icon="chevron-right" size="2x" /></ArrowRight>
+                        <Slide src={require(`../img/slider/${images[imageIndex].url}`)} />
+                        <ArrowLeft onClick={this.handlePreviousSlide}> <FontAwesomeIcon icon="chevron-left" size="2x" /></ArrowLeft>
+                        <ArrowRight onClick={this.handleNextSlide}> <FontAwesomeIcon icon="chevron-right" size="2x" /></ArrowRight>
                     </SlideWrapper>
                 }
             </>

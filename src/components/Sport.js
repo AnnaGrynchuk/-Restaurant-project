@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import data from "./assets/sport.json";
+import data from "../assets/sport.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
     background-image: linear-gradient(#2CC1DA, #FEC73D);
-    ${'' /* background: linear-gradient(#016000, #B5CF75); */}
 `;
 
 const Image = styled.img`
@@ -42,11 +41,10 @@ class Sport extends Component {
 
         return (
             <Wrapper>
-                <Image src={require(`./img/gallery/sports.jpg`)} alt="background_picture" />
+                <Image src={require(`../img/gallery/sports.jpg`)} alt="background_picture" />
                 <TextContainer>
                     {list.map(games => (
                         <Text key={games.id}>
-
                             {games.date} &nbsp;<FontAwesomeIcon icon="futbol" color="black" />&nbsp; {games.game}
                         </Text>))}
                 </TextContainer>

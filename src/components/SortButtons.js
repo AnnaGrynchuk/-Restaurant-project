@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 
@@ -28,21 +28,21 @@ const Button = styled.button`
     }
 `;
 
-const FilterButtons = ({ handleFilter }) => {
-
-    const filter = (ev) => {
-        const category = ev.target.id;
-        handleFilter({ category });
+const SortButtons = ({ handleSort }) => {
+    const sort = (ev) => {
+        const id = ev.target.id;
+        handleSort({ id });
     }
+
     return (
         <>
-            <Button onClick={filter} id="alcohol" type="button">
-                Алкоголь
+            <Button onClick={sort} id="sortPriceUp" type="button">
+                Сортировать по цене &#8657;
             </Button>
-            <Button onClick={filter} id="drink" type="button">
-                Напитки
+            <Button onClick={sort} id="sortPriceDown" type="button">
+                Сортировать по цене &#8659;
             </Button>
         </>
     );
 }
-export default FilterButtons
+export default SortButtons
