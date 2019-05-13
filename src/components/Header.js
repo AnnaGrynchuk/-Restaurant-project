@@ -10,7 +10,7 @@ const StyledHeader = styled.div`
     background-color: #0E8B87;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 1001;
 `;
 const Logo = styled.div`
     font-size: 36px;
@@ -47,15 +47,7 @@ const DropItem = styled.div`
     padding: 0;
     width: 120px;
 `
-const Ulist = styled.ul`
-    width: 120px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    background-color: #0E8B87;
-    z-index:1;
-`;
+
 const ListItem = styled.li`
 `;
 const Links = styled.a`
@@ -65,6 +57,7 @@ const Links = styled.a`
     text-transform: uppercase;
     font-weight: normal; 
     text-decoration: none;
+    text-align:center;
     cursor: pointer; 
     :hover {
         background-color: #106562;
@@ -100,83 +93,79 @@ const Button = styled.button`
             width:0px;
             height:0px;
             border: 5px solid;
-            top: 50px;
+            top: 30px;
             margin-left: 5px;
             border-color: white transparent transparent transparent;
         }
 `;
+const Ulist = styled.ul`
+    width: 120px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #0E8B87;
+    z-index:1;
+    display: none;
+    ${DropItem}:hover & {
+    display: block;
+  }
+`;
 
 class Header extends Component {
-    state = {
-        displayMenu: false,
-        id: null
-    };
-
-    onClick = (e) => {
-        this.setState({ displayMenu: !this.state.displayMenu, id: e.target.id });
-    }
 
     render() {
-        const { displayMenu, id } = this.state
+
         return (
             <StyledHeader>
                 <Logo>universe</Logo>
                 <NavBar>
                     <MenuItem ><StyledLink to="/"> Главная</StyledLink> </MenuItem>
-                    <DropItem  >
-                        <Button id="Menu" onMouseOver={this.onClick} >
+                    <DropItem>
+                        <Button>
                             Меню
                         </Button>
-                        {displayMenu && id === "Menu" ? (
-                            <Ulist onMouseLeave={this.onClick}>
-                                <ListItem>
-                                    <Links>
-                                        <StyledLink to="/drinks">
-                                            Меню пить
+                        <Ulist>
+                            <ListItem>
+                                <Links>
+                                    <StyledLink to="/drinks">
+                                        Меню пить
                                         </StyledLink>
-                                    </Links>
-                                </ListItem>
-                                <ListItem>
-                                    <Links>
-                                        <StyledLink to="/meal">
-                                            Меню есть
+                                </Links>
+                            </ListItem>
+                            <ListItem>
+                                <Links>
+                                    <StyledLink to="/meal">
+                                        Меню есть
                                         </StyledLink>
-                                    </Links>
-                                </ListItem>
-                            </Ulist>
-                        ) :
-                            (
-                                null
-                            )}
+                                </Links>
+                            </ListItem>
+                        </Ulist>
                     </DropItem>
                     <MenuItem ><StyledLink to="/media">Галлерея</StyledLink> </MenuItem>
                     <DropItem >
-                        <Button id="Events" onMouseOver={this.onClick}>
+                        <Button>
                             События
                         </Button>
-                        {displayMenu && id === "Events" ? (
-                            <Ulist onMouseLeave={this.onClick}>
-                                <ListItem>
-                                    <Links>
-                                        <StyledLink to="/music">
-                                            Музыка
+                        <Ulist >
+                            <ListItem>
+                                <Links>
+                                    <StyledLink to="/music">
+                                        Музыка
                                         </StyledLink>
-                                    </Links>
-                                </ListItem>
-                                <ListItem>
-                                    <Links>
-                                        <StyledLink to="/sport">
-                                            Спорт
+                                </Links>
+                            </ListItem>
+                            <ListItem>
+                                <Links>
+                                    <StyledLink to="/sport">
+                                        Спорт
                                         </StyledLink>
-                                    </Links>
-                                </ListItem>
-                            </Ulist>) :
-                            (
-                                null
-                            )}
+                                </Links>
+                            </ListItem>
+                        </Ulist>
                     </DropItem>
                     <MenuItem  ><StyledLink to="/reservation">Резерв столов</StyledLink> </MenuItem>
-                    <MenuItem  >Контакты</MenuItem>
+                    <MenuItem  > <StyledLink to="/contacts">Контакты</StyledLink></MenuItem>
                 </NavBar>
             </StyledHeader>
         )

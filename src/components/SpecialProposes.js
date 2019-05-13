@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -27,20 +27,20 @@ const HappyHours = styled.div`
     font-weight: bold;
 `;
 
-const  SpecialProposes = () => {
-    return(
+const SpecialProposes = () => {
+    return (
         <SpecialsWrapper>
             <HappyHours>
-            <p>Счастливые часы ежедневно с 12:00 до 18:00</p>
-            <FontAwesomeIcon icon="clock" size="6x" />
+                <p>Счастливые часы ежедневно с 12:00 до 18:00</p>
+                <FontAwesomeIcon icon="clock" size="6x" />
             </HappyHours>
             <HappyHours>
-            <p>Скидка 35% на День рождения</p>
-            <FontAwesomeIcon icon="birthday-cake" size="6x" />
+                <p>Скидка 35% на День рождения</p>
+                <FontAwesomeIcon icon="birthday-cake" size="6x" />
             </HappyHours>
             <HappyHours>
-             <p>Бесплатная доставка круглосуточно</p>
-            <FontAwesomeIcon icon="truck" size="6x" />
+                <p>Бесплатная доставка круглосуточно</p>
+                <FontAwesomeIcon icon="truck" size="6x" />
             </HappyHours>
         </SpecialsWrapper>
     )

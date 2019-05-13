@@ -11,11 +11,11 @@ import Sport from './Sport';
 import TableReservation from './TableReservation';
 import Footer from './Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar, faPhone } from '@fortawesome/free-solid-svg-icons';
+import Contacts from './Contacts';
 
 
-
-library.add(faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar);
+library.add(faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar, faPhone);
 
 
 
@@ -40,6 +40,7 @@ class App extends Component {
           <Route path="/music" component={Music}></Route>
           <Route path="/sport" component={Sport}></Route>
           <Route path="/reservation" component={TableReservation}></Route>
+          <Route path="/contacts" component={Contacts}></Route>
           <Footer />
 
         </Wrapper>

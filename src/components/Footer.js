@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.div`
@@ -15,14 +15,14 @@ const Info = styled.div`
 
 
 const Footer = () => {
- return (
-     <FooterWrapper>
-        <Info>
-            <p>Universe - твой формат отдыха!</p>
-            <p>Copyright © Universe 2019</p>
-        </Info>
-     </FooterWrapper>
- )
+    return (
+        <FooterWrapper>
+            <Info>
+                <p>Universe - твой формат отдыха!</p>
+                <p>Copyright © Universe 2019</p>
+            </Info>
+        </FooterWrapper>
+    )
 }
 
 export default Footer
