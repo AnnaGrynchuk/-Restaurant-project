@@ -70,10 +70,6 @@ const DropItem = styled.div`
     }
 `;
 const ListItem = styled.li`
-`;
-const Links = styled.a`
-    display: block;
-    color: white;
     padding: 30px 12px;
     text-transform: uppercase;
     font-weight: normal; 
@@ -82,7 +78,10 @@ const Links = styled.a`
     cursor: pointer; 
     :hover {
         background-color: #106562;
-        } 
+    }
+    @media screen and (max-width:400px) {
+        padding:10px;
+    } 
 `;
 const StyledLink = styled(NavLink)`
     color: white;
@@ -148,18 +147,14 @@ const Header = () => {
                     </Button>
                     <Ulist>
                         <ListItem>
-                            <Links>
-                                <StyledLink to="/drinks">
-                                    Меню пить
+                            <StyledLink to="/drinks">
+                                Меню пить
                                 </StyledLink>
-                            </Links>
                         </ListItem>
                         <ListItem>
-                            <Links>
-                                <StyledLink to="/meal">
-                                    Меню есть
+                            <StyledLink to="/meal">
+                                Меню есть
                                 </StyledLink>
-                            </Links>
                         </ListItem>
                     </Ulist>
                 </DropItem>
@@ -174,18 +169,14 @@ const Header = () => {
                     </Button>
                     <Ulist >
                         <ListItem>
-                            <Links>
-                                <StyledLink to="/music">
-                                    Музыка
+                            <StyledLink to="/music">
+                                Музыка
                                 </StyledLink>
-                            </Links>
                         </ListItem>
                         <ListItem>
-                            <Links>
-                                <StyledLink to="/sport">
-                                    Спорт
+                            <StyledLink to="/sport">
+                                Спорт
                                 </StyledLink>
-                            </Links>
                         </ListItem>
                     </Ulist>
                 </DropItem>
