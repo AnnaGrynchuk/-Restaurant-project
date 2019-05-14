@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import data from '../assets/slider.json';
 
-
 const SlideWrapper = styled.div`
     width: 100%; 
     background:#2CC1DA;
@@ -12,6 +11,7 @@ const SlideWrapper = styled.div`
 `;
 const Slide = styled.img`
 	width: 100%;
+    
 `;
 const ArrowLeft = styled.div`
     width: 20px;
@@ -38,7 +38,6 @@ class Slider extends Component {
     componentDidMount() {
         this.setState({ images: data });
     }
-
     handlePreviousSlide = () => {
         const { images, imageIndex } = this.state;
         const lastIndex = images.length - 1;
@@ -46,7 +45,6 @@ class Slider extends Component {
         const index = letCarousel ? lastIndex : imageIndex - 1;
         this.setState({ imageIndex: index });
     }
-
     handleNextSlide = () => {
         const { images, imageIndex } = this.state;
         const lastIndex = images.length - 1;

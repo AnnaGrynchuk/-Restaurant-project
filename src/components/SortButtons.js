@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const Button = styled.button`
     box-sizing: border-box;
     min-width: 200px;
@@ -16,15 +15,15 @@ const Button = styled.button`
     background-color:#099389;
     white-space: pre-wrap;
     :hover {
-    background-color:#3AAAA1; 
+        background-color:#3AAAA1; 
     };
     @media screen and (min-width:400px) and (max-width:500px) {
-    padding: 10px;
-    font-size:12px;
+        padding: 10px;
+        font-size:12px;
     }
     @media screen and (max-width:400px) {
-    padding: 5px;
-    font-size:12px;
+        padding: 5px;
+        font-size:12px;
     }
 `;
 
@@ -33,7 +32,6 @@ const SortButtons = ({ handleSort }) => {
         const id = ev.target.id;
         handleSort({ id });
     }
-
     return (
         <>
             <Button onClick={sort} id="sortPriceUp" type="button">
@@ -45,4 +43,5 @@ const SortButtons = ({ handleSort }) => {
         </>
     );
 }
+
 export default SortButtons

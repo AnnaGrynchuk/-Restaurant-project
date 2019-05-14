@@ -3,20 +3,19 @@ import styled from 'styled-components';
 
 const Info = styled.div`
     width: 160px;
-    min-height: 340px;
+    height: 340px;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px; 
     background-color: rgb(248, 238, 226);
     flex-wrap: wrap;
     @media screen and (max-width:400px) {
-    width: 130px;
-    height: 220px;
-    padding: 10px;
-    margin-right: 10px;
+    width: 95px;
+    height: 210px;
+    padding: 10px 0;
+    margin-right: 0;
     margin-bottom: 10px; 
     background-color: rgb(248, 238, 226);
-    border-radius: 25px;
     flex-wrap: wrap;
     }
 `;
@@ -52,6 +51,7 @@ const Price = styled(Text)`
     font-weight: bold;
     color: #D68A01;
 `;
+
 const Meal = (props) => {
     const { title, picture, info, price } = props;
     return (
@@ -66,10 +66,8 @@ const Meal = (props) => {
             <Price>
                 {price} грн
             </Price>
-
         </Info>
     );
-
 }
 
 export default Meal

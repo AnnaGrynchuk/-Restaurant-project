@@ -26,6 +26,10 @@ const Option = styled.div`
     padding: 10px;
     font-size: 18px;
     text-transform: uppercase;
+    @media screen and (max-width:672px) {
+        width: 100%;
+        padding:10px 0;
+    }
 `;
 const Bar = styled.div`
     display: flex;
@@ -49,6 +53,10 @@ const Stage = styled.div`
 const SubmitReservation = styled.div`
     display: flex;
     flex-direction: column;
+    @media screen and (max-width:672px) {
+        width: 100%;
+        align-items: center;
+    }
 `;
 const Tables = styled(SubmitReservation)`
     width: 50%;
@@ -82,7 +90,6 @@ const CircleSelected = styled.div`
     border: 2px solid #ca3f3f;
     margin-right: 10px;
 `;
-
 const Button = styled.button`
     display: flex;
     width: 200px;
@@ -96,7 +103,6 @@ const Button = styled.button`
     cursor: pointer;
     border-radius: 5px;
     align-self: center;
-    
 `;
 
 const timeAndTables = [
@@ -108,6 +114,7 @@ const timeAndTables = [
     { time: "20:00", tablesReserved: [] },
     { time: "22:00", tablesReserved: [] }
 ];
+
 class TableReservation extends Component {
     state = {
         tables: ["01", "02", "03", "04", "05", "06", "07", "08", "09"],
@@ -173,8 +180,7 @@ class TableReservation extends Component {
                 <Time
                     time={time}
                     select={currentTime}
-                    onClick={this.handleSelectedTime}
-                />
+                    onClick={this.handleSelectedTime} />
                 <Tables>
                     <Option> Выберите столик <FontAwesomeIcon icon="chevron-right" /></Option>
                     <Section>
@@ -188,7 +194,6 @@ class TableReservation extends Component {
                         <Stage>Сцена</Stage>
                     </Section>
                 </Tables>
-
                 <SubmitReservation>
                     <Option> Подтвердите бронь</Option>
                     <Color>
@@ -200,7 +205,6 @@ class TableReservation extends Component {
                     <Color>
                         <CircleSelected /> Выбранный Вами стол
                     </Color>
-
                     <Button type="submit" onClick={this.handleReserveTables}>Забронировать</Button>
                 </SubmitReservation>
             </Wrapper>

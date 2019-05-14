@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const Table = styled.div`
     display: flex;
     width: 100px;
@@ -15,13 +14,16 @@ const Table = styled.div`
     justify-content: center;
     cursor: pointer;
     :hover {
-      background-color: ${props => (props.isReserved > -1 ? "#8683834d" : "#f99825")};
+    background-color: ${props => (props.isReserved > -1 ? "#8683834d" : "#f99825")};
     };
+    @media screen and (max-width:672px) {
+        width: 60px;
+        height: 60px;
+    }
 `;
 
 const TablesScheme = props => {
     const { tables, onClick, reserved, select } = props;
-
     return (
         <>
             {tables.map(table => (
@@ -29,12 +31,10 @@ const TablesScheme = props => {
                     isReserved={reserved.indexOf(table)}
                     isSelect={select.indexOf(table)}
                     key={table}
-                    onClick={() => onClick(table)}
-                >
+                    onClick={() => onClick(table)}>
                     {table}
                 </Table>
             ))}
-
         </>
     );
 };

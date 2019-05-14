@@ -13,12 +13,12 @@ const SearchInput = styled.input`
     text-transform: uppercase;
     background-color:#abfaf3;
     @media screen and (min-width:400px) and (max-width:500px) {
-    padding: 10px;
-    font-size:12px;
+        padding: 10px;
+        font-size:12px;
     }
     @media screen and (max-width:400px) {
-    padding: 5px;
-    font-size:12px;
+        padding: 5px;
+        font-size:12px;
     }
 `;
 
@@ -31,4 +31,5 @@ const InputSearch = ({ handleSearch }) => {
         <SearchInput placeholder="Поиск по названию" type="search" onChange={onChange} />
     );
 }
+
 export default InputSearch

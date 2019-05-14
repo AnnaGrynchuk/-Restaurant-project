@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const StyledHeader = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     background-color: #0E8B87;
@@ -17,12 +19,14 @@ const Logo = styled.div`
     color: white;
     text-transform: uppercase;
     padding-left: 20px;
-    
+    @media screen and (max-width:400px) {
+        font-size:16px;
+    }
 `;
-
 const NavBar = styled.nav`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center; 
     overflow: hidden;
 `;
@@ -40,14 +44,31 @@ const MenuItem = styled.span`
     :hover {
         background-color: #106562;
     }
+    @media screen and (min-width:400px) and (max-width:782px){
+        border-right: none;
+    }
+    @media screen and (max-width:400px) {
+        font-size:14px;
+        border-right:none;
+        width: 90px;
+        padding:10px;
+    }
 `;
 const DropItem = styled.div`
     border-right: 1px solid #bbb;
     margin: 0;
     padding: 0;
-    width: 120px;
-`
-
+    width: 132px;
+    @media screen and (min-width:400px) and (max-width:782px){
+        border-right: none;
+    }
+    @media screen and (max-width:400px) {
+        font-size:14px;
+        border-right:none;
+        width: 90px;
+        padding:10px;
+    }
+`;
 const ListItem = styled.li`
 `;
 const Links = styled.a`
@@ -66,37 +87,36 @@ const Links = styled.a`
 const StyledLink = styled(NavLink)`
     color: white;
     text-decoration: none;
-
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
     }
 `;
-
 const Button = styled.button`
-    width:120px;
-    padding:25px;
+    width:132px;
+    padding:22px;
     margin:0;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
     font-weight: normal; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    font-size: 16px;
     cursor: pointer; 
     background-color: #0E8B87;
     border:none;
     outline: none;
+    position: relative;
     :hover {
         background-color: #106562;
-        }
+    }
+    @media screen and (max-width:400px) {
+        width: 90px;
+        padding:10px;
+        font-size:14px;
         :after{
-            content:"";
-            position:absolute;
-            width:0px;
-            height:0px;
-            border: 5px solid;
-            top: 30px;
-            margin-left: 5px;
-            border-color: white transparent transparent transparent;
+            right:15px;
         }
+    }
 `;
 const Ulist = styled.ul`
     width: 120px;
@@ -109,68 +129,79 @@ const Ulist = styled.ul`
     display: none;
     ${DropItem}:hover & {
     display: block;
-  }
+    }
 `;
 
-class Header extends Component {
-
-    render() {
-
-        return (
-            <StyledHeader>
-                <Logo>universe</Logo>
-                <NavBar>
-                    <MenuItem ><StyledLink to="/"> Главная</StyledLink> </MenuItem>
-                    <DropItem>
-                        <Button>
-                            Меню
-                        </Button>
-                        <Ulist>
-                            <ListItem>
-                                <Links>
-                                    <StyledLink to="/drinks">
-                                        Меню пить
-                                        </StyledLink>
-                                </Links>
-                            </ListItem>
-                            <ListItem>
-                                <Links>
-                                    <StyledLink to="/meal">
-                                        Меню есть
-                                        </StyledLink>
-                                </Links>
-                            </ListItem>
-                        </Ulist>
-                    </DropItem>
-                    <MenuItem ><StyledLink to="/media">Галлерея</StyledLink> </MenuItem>
-                    <DropItem >
-                        <Button>
-                            События
-                        </Button>
-                        <Ulist >
-                            <ListItem>
-                                <Links>
-                                    <StyledLink to="/music">
-                                        Музыка
-                                        </StyledLink>
-                                </Links>
-                            </ListItem>
-                            <ListItem>
-                                <Links>
-                                    <StyledLink to="/sport">
-                                        Спорт
-                                        </StyledLink>
-                                </Links>
-                            </ListItem>
-                        </Ulist>
-                    </DropItem>
-                    <MenuItem  ><StyledLink to="/reservation">Резерв столов</StyledLink> </MenuItem>
-                    <MenuItem  > <StyledLink to="/contacts">Контакты</StyledLink></MenuItem>
-                </NavBar>
-            </StyledHeader>
-        )
-    }
+const Header = () => {
+    return (
+        <StyledHeader>
+            <Logo>universe</Logo>
+            <NavBar>
+                <MenuItem >
+                    <StyledLink to="/">
+                        Главная
+                        </StyledLink>
+                </MenuItem>
+                <DropItem>
+                    <Button>
+                        Меню <FontAwesomeIcon icon="sort-down" />
+                    </Button>
+                    <Ulist>
+                        <ListItem>
+                            <Links>
+                                <StyledLink to="/drinks">
+                                    Меню пить
+                                </StyledLink>
+                            </Links>
+                        </ListItem>
+                        <ListItem>
+                            <Links>
+                                <StyledLink to="/meal">
+                                    Меню есть
+                                </StyledLink>
+                            </Links>
+                        </ListItem>
+                    </Ulist>
+                </DropItem>
+                <MenuItem >
+                    <StyledLink to="/media">
+                        Галлерея
+                    </StyledLink>
+                </MenuItem>
+                <DropItem >
+                    <Button>
+                        События <FontAwesomeIcon icon="sort-down" />
+                    </Button>
+                    <Ulist >
+                        <ListItem>
+                            <Links>
+                                <StyledLink to="/music">
+                                    Музыка
+                                </StyledLink>
+                            </Links>
+                        </ListItem>
+                        <ListItem>
+                            <Links>
+                                <StyledLink to="/sport">
+                                    Спорт
+                                </StyledLink>
+                            </Links>
+                        </ListItem>
+                    </Ulist>
+                </DropItem>
+                <MenuItem >
+                    <StyledLink to="/reservation">
+                        Резерв столов
+                    </StyledLink>
+                </MenuItem>
+                <MenuItem >
+                    <StyledLink to="/contacts">
+                        Контакты
+                    </StyledLink>
+                </MenuItem>
+            </NavBar>
+        </StyledHeader>
+    )
 }
-
 
 export default Header

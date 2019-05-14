@@ -6,6 +6,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width:672px) {
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    }
 `;
 const SelectTime = styled.div`
   background-color: #f99825;
@@ -13,6 +18,9 @@ const SelectTime = styled.div`
   padding: 10px;
   font-size: 18px;
   text-transform: uppercase;
+  @media screen and (max-width:672px) {
+    width: 100%;
+    }
 `;
 const TimeTable = styled.div`
   display: flex;
@@ -26,6 +34,10 @@ const TimeTable = styled.div`
   cursor: pointer;
   :hover {
     background-color: ${props => (props.isSelect ? "#ca3f3f" : "#f99825")};
+  }
+  @media screen and (max-width:672px) {
+    width: 70px;
+    height: 35px;
   }
 `;
 

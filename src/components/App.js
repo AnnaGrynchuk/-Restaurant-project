@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './Header';
 import Main from './Main'
 import ImageGallery from './ImageGallery';
@@ -11,27 +11,21 @@ import Sport from './Sport';
 import TableReservation from './TableReservation';
 import Footer from './Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar, faPhone, faSortDown } from '@fortawesome/free-solid-svg-icons';
 import Contacts from './Contacts';
-
-
-library.add(faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar, faPhone);
-
-
+library.add(faChevronLeft, faChevronRight, faClock, faBirthdayCake, faTruck, faCalendarAlt, faFutbol, faGuitar, faPhone, faSortDown);
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
 `;
+
 class App extends Component {
-
-
 
   render() {
     return (
       <Router>
         <Wrapper>
-
           <Header />
           <Route exact path="/" component={Main}></Route>
           <Route path="/media" component={ImageGallery}></Route>
@@ -42,13 +36,10 @@ class App extends Component {
           <Route path="/reservation" component={TableReservation}></Route>
           <Route path="/contacts" component={Contacts}></Route>
           <Footer />
-
         </Wrapper>
       </Router>
-
     );
   }
-
 }
 
 export default App;

@@ -9,7 +9,6 @@ const Wrapper = styled.div`
     padding-bottom: 20px;
     background: linear-gradient(#870C9C, #FFC83D);
 `;
-
 const Image = styled.img`
     width:100%;
 `;
@@ -37,9 +36,7 @@ class Music extends Component {
     }
 
     render() {
-
         const { list } = this.state;
-
         return (
             <Wrapper>
                 <Image src={require(`../img/gallery/concerts.jpg`)} alt="background_picture" />

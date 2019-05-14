@@ -4,20 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Map from './Map';
 
 const Wrapper = styled.div`
-display: flex;
-justify-content: center;
-width: 100%;
-background-image: linear-gradient(#2CC1DA, #F8E410);
-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    width: 100%;
+    background-image: linear-gradient(#2CC1DA, #F8E410);
+    color: white;
 `;
-
 const Info = styled.div`
-display: flex;
-flex-direction: column; 
-margin: 50px 0;
-padding-right: 30px;
-justify-content: flex-start;
-font-size: 18px;
+    display: flex;
+    flex-direction: column; 
+    margin: 50px 0;
+    padding-right: 30px;
+    justify-content: flex-start;
+    font-size: 18px;
+    @media screen and (max-width:600px) {
+        margin: 20px 0;
+    }
 `;
 
 const Contacts = () => {

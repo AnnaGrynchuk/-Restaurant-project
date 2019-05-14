@@ -17,7 +17,7 @@ const SideMenuList = styled.form`
     flex-basis: 20%;
     padding:20px;
     @media screen and (max-width:400px) {
-    padding: 0 10px;
+      padding: 0 10px;
     }
 `;
 const DrinksContainer = styled.div`
@@ -26,7 +26,7 @@ const DrinksContainer = styled.div`
     flex-grow: 2;
     flex-basis: 80%;
     @media screen and (min-width:400px) and (max-width:500px) {
-    padding:20px 10px;
+      padding:20px 10px;
     }
 `;
 const Reset = styled.button`
@@ -42,16 +42,16 @@ const Reset = styled.button`
     text-transform: uppercase;
     background-color:#1f635c;
     :hover {
-    background-color:#3AAAA1; 
+      background-color:#3AAAA1; 
     }
 `;
+
 class MenuDrink extends Component {
   state = {
     list: [],
     title: '',
     id: '',
     category: '',
-    result: [],
   }
   componentDidMount() {
     this.setState({ list: data });
@@ -84,7 +84,6 @@ class MenuDrink extends Component {
       result = list.filter(drinks =>
         drinks.category === category);
     }
-
     if (id) {
       switch (id) {
         case 'sortPriceUp':
@@ -97,7 +96,6 @@ class MenuDrink extends Component {
           break;
       }
     }
-
     return (
       <Wrapper>
         <SideMenuList ref={this.getFormRef}>

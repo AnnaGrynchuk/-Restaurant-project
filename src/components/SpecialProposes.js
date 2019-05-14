@@ -8,39 +8,45 @@ const SpecialsWrapper = styled.div`
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    ${'' /* background: linear-gradient(#870C9C, #FFC83D); */}
-    ${'' /* background: linear-gradient(#7C14B7,#28F3E3); */}
     background: linear-gradient(#2CC1DA, #F8E410);
 `;
-
 const HappyHours = styled.div`
-    width: 30%;
+    display:flex;
+    flex-direction:column; 
+    align-items: center;
+    width: 300px;
     padding: 40px 0;
-    
-    ${'' /* background:linear-gradient(#9FB9FB, #FE85CE); */}
-    ${'' /* background: linear-gradient(#870C9C, #FFC83D); */}
-    
     color: white;
     text-transform: uppercase;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
+    @media screen and (max-width:400px) {
+        font-size:20px;
+        padding: 20px 0;
+    }
+`;
+const Icon = styled(FontAwesomeIcon)`
+    font-size: 120px;
+    @media screen and (max-width:400px) {
+        font-size:60px;
+    }
 `;
 
 const SpecialProposes = () => {
     return (
         <SpecialsWrapper>
             <HappyHours>
-                <p>Счастливые часы ежедневно с 12:00 до 18:00</p>
-                <FontAwesomeIcon icon="clock" size="6x" />
+                <p>Счастливые часы с 12:00 до 18:00</p>
+                <Icon icon="clock" />
             </HappyHours>
             <HappyHours>
                 <p>Скидка 35% на День рождения</p>
-                <FontAwesomeIcon icon="birthday-cake" size="6x" />
+                <Icon icon="birthday-cake" />
             </HappyHours>
             <HappyHours>
                 <p>Бесплатная доставка круглосуточно</p>
-                <FontAwesomeIcon icon="truck" size="6x" />
+                <Icon icon="truck" />
             </HappyHours>
         </SpecialsWrapper>
     )

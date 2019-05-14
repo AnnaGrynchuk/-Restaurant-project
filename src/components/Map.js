@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import L from 'leaflet';
 
 delete L.Icon.Default.prototype._getIconUrl;
-
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
   iconUrl: require('leaflet/dist/images/marker-icon.png'),
@@ -16,12 +15,17 @@ const LeafletMap = styled(Map)`
 width: 400px;
 height: 400px;
 margin: 50px 0;
+@media screen and (max-width:600px) {
+  width: 300px;
+  height: 300px;
+  margin: 20px 0;
+  }
 `;
 const position = [50.44427829045941, 30.59349060058594];
+
 class Maps extends Component {
   render() {
 
-    console.log(Marker);
     return (
       <>
         <LeafletStyles />
@@ -35,13 +39,10 @@ class Maps extends Component {
           scrollWheelZoom={true}
           dragging={true}
           animate={true}
-          easeLinearity={0.35}
-        >
+          easeLinearity={0.35}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-          />
-
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' />
           <Marker position={position}>
             <Popup>Universe restaurant</Popup>
           </Marker>

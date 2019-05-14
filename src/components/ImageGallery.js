@@ -4,46 +4,46 @@ import data from "../assets/media.json";
 import Loader from "./Loader"
 
 const Wrapper = styled.div`
-background-image: linear-gradient(#2CC1DA, #F8E410);
+    background-image: linear-gradient(#2CC1DA, #F8E410);
+`;
+const Gallery = styled.div`
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+`;
+const Image = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+`;
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    color: white
+`;
+const Pagination = styled.div`
+    padding-top:25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+`;
+const PageButton = styled.button`
+    color: black;
+    background-color:white;
+    font-size:16px;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid lightgray;
+    :hover:not(.active) 
+        {background-color: #ddd;}
 `;
 
-const Gallery = styled.div`
-display: grid;
-grid-gap: 10px;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-grid-auto-rows: 200px;
 
-
-`
-const Image = styled.img`
-width: 100%;
-height: 100%;
-object-fit: cover;
-`
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align:center;
-color: white
-`
-const Pagination = styled.div`
-padding-top:25px;
-padding-bottom: 25px;
-display: flex;
-justify-content: center;
-`
-const PageButton = styled.button`
-color: black;
-background-color:white;
-font-size:16px;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-  border: 1px solid lightgray;
-  :hover:not(.active) {background-color: #ddd;}
-`
 class ImageGallery extends Component {
     state = {
         images: [],
@@ -87,12 +87,12 @@ class ImageGallery extends Component {
         return (
             <Wrapper>
                 <Container>
-                    <h1>Images</h1>
                     {isLoading ? <Loader></Loader> : ""}
                 </Container>
                 <Gallery>
-                    {visibleImages.map(img => <Image onLoad={this.handleImageLoaded} key={img.id} src={require(`../img/gallery/${img.url}`)}>
-                    </Image>)}
+                    {visibleImages.map(img =>
+                        <Image onLoad={this.handleImageLoaded} key={img.id} src={require(`../img/gallery/${img.url}`)}>
+                        </Image>)}
                 </Gallery>
                 <Pagination>
                     <PageButton id="dec" onClick={this.handleDecPage} >&laquo;</PageButton>

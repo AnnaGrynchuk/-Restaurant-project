@@ -17,7 +17,7 @@ const SideMenuList = styled.form`
     flex-basis: 20%;
     padding:20px;
     @media screen and (max-width:400px) {
-    padding: 0 10px;
+        padding: 0 10px;
     }
 `;
 const MealContainer = styled.div`
@@ -26,7 +26,7 @@ const MealContainer = styled.div`
     flex-grow: 2;
     flex-basis: 80%;
     @media screen and (min-width:400px) and (max-width:500px) {
-    padding:20px 10px;
+        padding:20px 10px;
     }
 `;
 const Reset = styled.button`
@@ -45,13 +45,13 @@ const Reset = styled.button`
     background-color:#3AAAA1; 
     }
 `;
+
 class MenuMeal extends Component {
     state = {
         list: [],
         title: '',
         id: '',
         category: '',
-        result: [],
     }
     componentDidMount() {
         this.setState({ list: data });
@@ -84,7 +84,6 @@ class MenuMeal extends Component {
             result = list.filter(meal =>
                 meal.category === category);
         }
-
         if (id) {
             switch (id) {
                 case 'sortPriceUp':
@@ -97,7 +96,6 @@ class MenuMeal extends Component {
                     break;
             }
         }
-
         return (
             <Wrapper>
                 <SideMenuList ref={this.getFormRef}>
@@ -122,6 +120,5 @@ class MenuMeal extends Component {
         );
     }
 }
-
 
 export default MenuMeal

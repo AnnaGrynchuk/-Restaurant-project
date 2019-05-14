@@ -1,23 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Info = styled.div`
     width: 160px;
-    min-height: 320px;
+    height: 320px;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px; 
     background-color: rgb(248, 238, 226);
     flex-wrap: wrap;
     @media screen and (max-width:400px) {
-    width: 130px;
-    height: 220px;
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px; 
-    background-color: rgb(248, 238, 226);
-    border-radius: 25px;
-    flex-wrap: wrap;
+        width: 95px;
+        height: 190px;
+        padding: 10px 0;
+        margin-right: 0;
+        margin-bottom: 10px; 
+        background-color: rgb(248, 238, 226);
+        flex-wrap: wrap;
     }
 `;
 const Photo = styled.img`
@@ -25,7 +24,7 @@ const Photo = styled.img`
     margin-left: auto;
     margin-right: auto;
     @media screen and (max-width:400px) {
-    width:80px;
+        width:80px;
     }
 `;
 const Name = styled.h3`
@@ -35,7 +34,7 @@ const Name = styled.h3`
     text-transform: uppercase;
     border-bottom: 1px dashed  #03D8E3;
     @media screen and (max-width:400px) {
-    font-size:12px;
+        font-size:12px;
     }
 `;
 const Text = styled.p`
@@ -44,7 +43,7 @@ const Text = styled.p`
     color: #4a5353;
     text-transform: uppercase;
     @media screen and (max-width:400px) {
-    font-size:10px;
+        font-size:10px;
     }
 `;
 const Price = styled(Text)`
@@ -52,6 +51,7 @@ const Price = styled(Text)`
     font-weight: bold;
     color: #D68A01;
 `;
+
 const Drinks = (props) => {
     const { title, picture, info, price } = props;
     return (
@@ -68,7 +68,6 @@ const Drinks = (props) => {
             </Price>
         </Info>
     );
-
 }
 
 export default Drinks
